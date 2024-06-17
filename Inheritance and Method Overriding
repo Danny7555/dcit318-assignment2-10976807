@@ -1,1 +1,45 @@
+using System;
+
+// Base class
+public class Animal
+{
+    public virtual void MakeSound()
+    {
+        Console.WriteLine("Some generic sound");
+    }
+}
+
+// Derived class 1
+public class Dog : Animal
+{
+    public override void MakeSound()
+    {
+        Console.WriteLine("Bark");
+    }
+}
+
+// Derived class 2
+public class Cat : Animal
+{
+    public override void MakeSound()
+    {
+        Console.WriteLine("Meow");
+    }
+}
+
+public class Program
+{
+    public static void Main(string[] args)
+    {
+        // Create instances of Animal, Dog, and Cat
+        Animal animal = new Animal();
+        Dog dog = new Dog();
+        Cat cat = new Cat();
+
+        // Call the MakeSound() method on each instance
+        animal.MakeSound(); // Output: Some generic sound
+        dog.MakeSound(); // Output: Bark
+        cat.MakeSound(); // Output: Meow
+    }
+}
 
