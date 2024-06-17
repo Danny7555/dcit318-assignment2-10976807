@@ -1,1 +1,40 @@
+using System;
+
+// Interface
+public interface IMovable
+{
+    void Move();
+}
+
+// Class 1 implementing the IMovable interface
+public class Car : IMovable
+{
+    public void Move()
+    {
+        Console.WriteLine("Car is moving");
+    }
+}
+
+// Class 2 implementing the IMovable interface
+public class Bicycle : IMovable
+{
+    public void Move()
+    {
+        Console.WriteLine("Bicycle is moving");
+    }
+}
+
+public class Program
+{
+    public static void Main(string[] args)
+    {
+        // Create instances of Car and Bicycle
+        IMovable car = new Car();
+        IMovable bicycle = new Bicycle();
+
+        // Call the Move() method on each instance
+        car.Move(); // Output: Car is moving
+        bicycle.Move(); // Output: Bicycle is moving
+    }
+}
 
